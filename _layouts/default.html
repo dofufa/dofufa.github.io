@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="{{ page.description }}">
+	<meta name="keywords" content="{{ page.keywords }}">
+	<title>{{ page.title }}</title>
+
+	{% if page.use_mathjax %}
+	  {% include mathjax.html %}
+	{% endif %}
+</head>
+<body>
+<h1>{{ page.title }}</h1>
+
+{{ content }}
+
+
+<style>
+body {
+	font-size: 18pt;
+	font-family: math;
+}
+
+code {
+	font-family: "Courier New";
+	font-weight: bold;
+	font-size: 14pt;
+	color: navy;
+	background-color: gray;
+	padding: 0 0 0 0px;
+	line-height: 1.5;
+}
+</style>
+</body>
+</html>
